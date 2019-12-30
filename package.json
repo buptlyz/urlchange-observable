@@ -1,0 +1,28 @@
+{
+  "name": "urlchange-observable",
+  "version": "0.0.1-alpha1",
+  "main": "dist/common/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "lobservable": "^0.0.1"
+  },
+  "dependencies": {
+    "lobservable": "0.0.1-alpha1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "rm -rf dist && npm run build:common && npm run build:esm && npm run build:umd",
+    "build:common": "tsc --module commonjs --outDir dist/common",
+    "build:esm": "tsc --module ESNext --outDir dist/esm",
+    "build:umd": "tsc --module UMD --outDir dist/umd",
+    "pub": "npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
