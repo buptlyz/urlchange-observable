@@ -1,11 +1,14 @@
 {
   "name": "urlchange-observable",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1-alpha5",
   "main": "dist/common/index.js",
   "module": "dist/esm/index.js",
   "files": [
-    "dist"
+    "dist",
+    "index.d.ts",
+    "method-chain.d.ts"
   ],
+  "types": "index.d.ts",
   "peerDependencies": {
     "lobservable": "^0.0.1"
   },
