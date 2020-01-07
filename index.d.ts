@@ -1,4 +1,4 @@
-import Observable from 'lobservable';
+import Observable from 'observable';
 export declare type Options = {
     shouldEmitUrlChange?: (oldPath: string, newPath: string) => boolean;
     trackReplaceState?: boolean;

@@ -1,5 +1,5 @@
-import Observable, { Observer } from 'lobservable'
-import MethodChain from './method-chain'
+import Observable, { Observer } from 'observable'
+import MethodChain from 'method-chain'
 
 export type Options = { 
     shouldEmitUrlChange?: (oldPath: string, newPath: string) => boolean
@@ -37,7 +37,9 @@ export default function createUrlchangeObservable(options: Options = {}): Observ
             }
         }
         
-        function handlePopState() {}
+        function handlePopState() {
+            handler(true)
+        }
         
         function handler(historyDidUpdate: Boolean) {
             setTimeout(() => {

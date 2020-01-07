@@ -1,27 +1,28 @@
 {
   "name": "urlchange-observable",
-  "version": "0.0.1-alpha5",
-  "main": "dist/common/index.js",
+  "version": "0.0.1-alpha6",
+  "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist",
-    "index.d.ts",
-    "method-chain.d.ts"
+    "index.d.ts"
   ],
   "types": "index.d.ts",
   "peerDependencies": {
     "lobservable": "^0.0.1"
   },
   "dependencies": {
-    "lobservable": "0.0.1-alpha1"
+    "method-chain": "0.0.1-alpha2",
+    "observable": "0.0.1-alpha1"
   },
   "devDependencies": {},
   "scripts": {
     "dev": "tsc -w",
-    "build": "rm -rf dist && npm run build:common && npm run build:esm && npm run build:umd",
+    "build": "rm -rf dist && npm run build:common && npm run build:esm && npm run build:umd && npm run build:d",
     "build:common": "tsc --module commonjs --outDir dist/common",
     "build:esm": "tsc --module ESNext --outDir dist/esm",
     "build:umd": "tsc --module UMD --outDir dist/umd",
+    "build:d": "tsc -d --emitDeclarationOnly",
     "pub": "npm run build && npm publish"
   },
   "keywords": [],
