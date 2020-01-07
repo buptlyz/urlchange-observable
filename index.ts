@@ -1,5 +1,5 @@
 import Observable, { Observer } from 'observable'
-import MethodChain from 'method-chain'
+import MethodChain from 'override-chain'
 
 export type Options = { 
     shouldEmitUrlChange?: (oldPath: string, newPath: string) => boolean

@@ -1,6 +1,6 @@
 {
   "name": "urlchange-observable",
-  "version": "0.0.1-alpha6",
+  "version": "0.0.1-alpha7",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -12,8 +12,8 @@
     "lobservable": "^0.0.1"
   },
   "dependencies": {
-    "method-chain": "0.0.1-alpha2",
-    "observable": "0.0.1-alpha1"
+    "observable": "0.0.1-alpha1",
+    "override-chain": "0.0.1-alpha1"
   },
   "devDependencies": {},
   "scripts": {
