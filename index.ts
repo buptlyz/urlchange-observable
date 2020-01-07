@@ -15,11 +15,12 @@ function defaultShouldEmitUrlChange(oldPath: string, newPath: string) {
     return !!(oldPath && newPath)
 }
 
-export default function createUrlchangeObservable(options: Options = {}): Observable {
+export function urlchangeObservableFactory(options: Options = {}): Observable {
     const {
         shouldEmitUrlChange = defaultShouldEmitUrlChange,
         trackReplaceState = true,
     } = options
+
     return new Observable((observer: Observer) => {
         let path = getPath()
     
@@ -65,3 +66,5 @@ export default function createUrlchangeObservable(options: Options = {}): Observ
         }
     })
 }
+
+export default urlchangeObservableFactory()

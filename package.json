@@ -1,6 +1,6 @@
 {
   "name": "urlchange-observable",
-  "version": "0.0.1-alpha7",
+  "version": "0.0.1-alpha8",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
   "files": [
